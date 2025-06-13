@@ -67,6 +67,9 @@ docker run -p 4000:3000 abu
     docker stop <id>
     ```
 
+# To create an Dockerfile
+* ```bash docker init ```
+* To answer the upcoming queries it creates docker file automatically
 
     
 

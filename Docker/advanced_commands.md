@@ -34,7 +34,17 @@
     * ### The Image Name should be like this 
         `username\image_name` `mdabucse\first`
 
+## Docker Network
+![alt text](image-2.png)
+
+#### `IMP` When we run an os based containers definitely run in the `-it` interactive mode otherwise it exits automatically
 
 
+* To see the ouput in the browser we definitely do the `PORT FORWARDING`
+![alt text](image-3.png)
 
 
+* Auto Port Mapping `-P` during the creation of new container when we use this Capital P It randomly assign the port number to webhost
+
+### Types Of Storage in Docker
+![alt text](image-4.png)

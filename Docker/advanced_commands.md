@@ -48,3 +48,10 @@
 
 ### Types Of Storage in Docker
 ![alt text](image-4.png)
+
+## Docker Volumes
+* To create a volume `docker create <volume_name>`
+* To Inspect the Volumes `docker volume inspect <volume_name>`
+* To mount an volume to an container `docker run -d -it --mount source=<path>,destination=<path> <image_name>`
+    * `source` add the path of the mount storage
+    * `destination` where to mount in the container path 

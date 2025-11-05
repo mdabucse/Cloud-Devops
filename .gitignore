@@ -1,0 +1,6 @@
+# CICD keys
+CICD/*.ppk
+CICD/*.pem
+
+# Ignore entire folder
+Cloud-Devops/

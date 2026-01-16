@@ -1,4 +1,5 @@
 # Linux Commands
+GPT Link https://chatgpt.com/share/696a2f0a-a038-8001-9780-b3b35cad87c2
 
 ## Navigation Commands
 
@@ -77,3 +78,73 @@ To create your own commands
 `alias name=command`
 Eg
 `alias abu="ls -l"`
+
+## Background Jobs (nohub)
+* `&` is the important key for the background running
+* `nohup` Keep running the process after logout
+* `nohup python3 first.py &` it runs an python file background area 
+* `ps ` To show all the process 
+	* `-a` Show all users process
+	* `-u` Show all the process of the current user
+	* `-x` Show all the background process
+* `Note` In the process it having to types
+	* Buffered Mode (To store the log after the kill of the program)
+		* Eg `nohup python3 first >> data.log &`
+	* Unbuffered Mode `-u` (To store the logs whenever it came it automatically added to the log file (streaming))
+		* Eg `nohup python3 -u first >> data.log &`
+* `tail -f data.log` It shows the all the logs from the bottom and `-f follow` means to stream the content to see live
+* `kill <process id>` To kill the process
+	Options 
+
+	| Signal  | Number | Meaning               |
+	| ------- | ------ | --------------------- |
+	| SIGTERM | 15     | Normal stop (default) |
+	| SIGINT  | 2      | Ctrl+C                |
+	| SIGKILL | 9      | Force kill            |
+	| SIGSTOP | 19     | Pause process         |
+
+	* Eg `kill -9 <process_id>` Force Kill
+
+## Disk Management
+* `df -h` Disk Information `-h` Human readle format
+* `du -sh <folder_name>` To check the usage of that particular folder `-sh` 
+	* `s` Summary
+	* `h` Human readle format
+* Zip & Tar Files
+	* Zip means 
+
+			Files
+			 ↓
+			Pack + Compress
+			 ↓
+			zip file
+
+	* `zip -r <zip_file_name> <folder_name>` To zip the folder
+	* `unzip <zip_file_name>` Unzip the file
+
+	* Tar Means
+
+			Files
+			 ↓
+			Pack only
+			 ↓
+			tar file
+			 ↓
+			(optional)
+			Compress using gzip/bzip2/xz
+
+	* `tar -cf <tar_name> <folder_name> ` To create tar file
+		* `-c` Create
+		* `-f` Filename
+
+	* `tar -xf <tar_name> <folder_name>`
+		* `-x` Extract
+		* `-f` Filename
+
+* `wc ` Word count it reads and return (No of Words , lines and charecters)
+* `sort <filename>` sort the content
+	* `sort -r <filename>` reverse the sort
+* `head <filename>` It shows top 10 commands 
+	* `head -n 10 <filename>` we can change the no of lines in the command
+* `tail <filename>` It shows the last 10 commands in the file 
+	* `tail -n 10 <filename>` we can change the no of lines in the command
